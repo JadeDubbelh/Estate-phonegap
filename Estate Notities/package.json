@@ -1,0 +1,42 @@
+{
+  "name": "phonegap-template-blank",
+  "version": "1.1.0",
+  "description": "blank template for phonegap and cordova projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/phonegap-app-blank.git"
+  },
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "author": "PhoneGap Team",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/phonegap/phonegap-app-blank/issues"
+  },
+  "homepage": "https://github.com/phonegap/phonegap-app-blank#readme",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-wrapper": "^1.0.0",
+    "jshint": "^2.9.4"
+  }
+}

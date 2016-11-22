@@ -1,0 +1,196 @@
+/* scss */
+/* ==================================================== settings */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700; }
+
+h2 {
+  margin-top: 15px;
+  font-size: 25px;
+  padding-bottom: 15px; }
+
+h3 {
+  margin: 10px 0;
+  font-size: 18px; }
+
+h4 {
+  margin: 10px 0;
+  font-size: 16px; }
+
+h5 {
+  margin: 10px 0;
+  font-size: 14px; }
+
+p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-weight: 400; }
+
+/* Base Color maps */
+/* ==================================================== elements */
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400; }
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  color: #ffffff;
+  text-decoration: none; }
+
+hr.divider {
+  border: 0 none;
+  height: 2px;
+  background-color: #eeeeee;
+  width: 25%;
+  float: left;
+  margin: 0 0 10px; }
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 0;
+  box-shadow: none;
+  resize: none;
+  border: 0 none;
+  border-bottom: 4px solid #eeeeee;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  z-index: 999; }
+  textarea:focus {
+    box-shadow: none;
+    border: 0 none;
+    border-bottom: 4px solid #35b0e4; }
+
+select {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  resize: none;
+  border: 0 none;
+  border-bottom: 4px solid #eeeeee;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  overflow: hidden;
+  z-index: 999; }
+  select:focus {
+    box-shadow: none;
+    border: 0 none;
+    border-bottom: 4px solid #35b0e4; }
+
+/* ==================================================== components */
+.profilepic {
+  border-radius: 50%;
+  margin-left: -1px;
+  position: relative;
+  max-width: 100px;
+  text-align: center;
+  transition: all .5s ease; }
+  .profilepic img {
+    border-radius: 50%;
+    display: inline-block; }
+
+.centered {
+  text-align: center; }
+
+.noteTextarea {
+  margin-top: 20px; }
+
+.notes {
+  margin-top: 30px;
+  width: 100px; }
+
+.note {
+  font-family: Montserrat; }
+
+.date {
+  font-family: Montserrat;
+  color: #b7b7b7; }
+
+hr.linetop {
+  background-color: #74c7a1;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  top: 10px; }
+
+hr.linetip {
+  background-color: #e34856;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  top: 10px; }
+
+.icon {
+  width: 100%;
+  display: inline-block;
+  margin-top: 13px; }
+
+i {
+  text-align: center; }
+
+.top {
+  color: #74c7a1; }
+
+.tip {
+  color: #e34856; }
+
+.switch {
+  margin: 0 10px 0 0;
+  height: 0; }
+
+.opmerking {
+  margin-top: 10px; }
+
+.button {
+  background: #35b0e4;
+  width: 150px; }
+
+.notebutton {
+  font-family: "Montserrat", Arial, sans-serif;
+  bottom: 0; }
+
+.switch-field {
+  font-family: Montserrat, sans-serif;
+  overflow: hidden;
+  margin: 18px 0; }
+
+.switch-field input {
+  display: none; }
+
+.switch-field label {
+  float: left; }
+
+.switch-field label {
+  width: 120px;
+  background-color: #b7b7b7;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+  text-shadow: none;
+  padding: 0.45em 1em;
+  margin: 0;
+  border-bottom: 4px solid #35b0e4;
+  transition: all 0.2s ease-in-out; }
+
+.switch-field label:hover {
+  cursor: pointer; }
+
+.switch-field input:checked + label {
+  background-color: #35b0e4;
+  box-shadow: none; }

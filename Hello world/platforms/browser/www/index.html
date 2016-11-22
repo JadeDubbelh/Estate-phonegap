@@ -38,65 +38,162 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
     <title>Hello World</title>
+
+    <script>
+        var pictureSource; // picture source
+        var destinationType; // sets the format of returned value
+        // PhoneGap wordt ingeladen, laat een alert zien wanneer hij ready is!
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        // kijkt naar het percentage van batterij
+        function onDeviceReady() {
+            window.addEventListener("batterystatus", onBatteryStatus, false);
+            pictureSource = navigator.camera.PictureSourceType;
+            destinationType = navigator.camera.DestinationType;
+        }
+
+        // kijkt of de mobiel aan de oplader ligt
+        function onBatteryStatus(info) {
+            var element = document.getElementById("status");
+            var status = ("Batterij niveau: " + info.level + "<br />Aan het opladen: " + info.isPlugged);
+            //   element.innerHTML = "";
+            element.innerHTML = status;
+            // console.log(info.level);
+        }
+
+        // Called when a photo is successfully retrieved
+        //
+        function onPhotoDataSuccess(imageData) {
+            // Uncomment to view the base64 encoded image data
+            // console.log(imageData);
+
+            // Get image handle
+            //
+            var largeImage = document.getElementById('largeImage');
+
+            // Unhide image elements
+            //
+            largeImage.style.display = 'block';
+
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            //
+            largeImage.src = "data:image/jpeg;base64," + imageData;
+        }
+
+        // Called when a photo is successfully retrieved
+        //
+        function onPhotoURISuccess(imageURI) {
+            // Uncomment to view the image file URI
+            // console.log(imageURI);
+
+            // Get image handle
+            //
+            var largeImage = document.getElementById('largeImage');
+
+            // Unhide image elements
+            //
+            largeImage.style.display = 'block';
+
+            // Show the captured photo
+            // The inline CSS rules are used to resize the image
+            //
+            largeImage.src = imageURI;
+        }
+
+        // A button will call this function
+        //
+        function capturePhoto() {
+            // Take picture using device camera and retrieve image as base64-encoded string
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+                quality: 50,
+                destinationType: destinationType.DATA_URL
+            });
+        }
+
+        // A button will call this function
+        //
+        function capturePhotoEdit() {
+            // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+            navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+                quality: 20,
+                allowEdit: true,
+                destinationType: destinationType.DATA_URL
+            });
+        }
+
+        // A button will call this function
+        //
+        function getPhoto(source) {
+            // Retrieve image file location from specified source
+            navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+                quality: 50,
+                destinationType: destinationType.FILE_URI,
+                sourceType: source
+            });
+        }
+
+        // Called if something bad happens.
+        //
+        function onFail(message) {
+            alert('Failed because: ' + message);
+        }
+    </script>
 </head>
 
-<body>
+<body onload="onload()">
 
-
+    <!-- battery stuff -->
     <div class="row">
-        <div class="large-8 medium-8 columns">
-            <h1>Welkom yo</h1>
-            <!-- Grid Example -->
+        <div class="scolumns mall-12">
+            <!-- <div class="columns small-12">
+                <div id="deviceready" class="blink">
+                    <p class="event listening">Loading ...</p>
+                    <p class="event received">Hell Yeah! Let's roll!</p>
+                </div>
+            </div> -->
 
-            <div class="row">
-                <div class="large-12 columns">
-                    <div class="primary callout">
-                        <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
-                    </div>
+            <h1>Hey, Oni</h1>
+
+            <div class="columns small-12">
+                <div id="battery">
+                    <i class='fa fa-battery-three-quarters fa-4x' aria-hidden='true'></i>
                 </div>
             </div>
-            <div class="row">
-                <div class="columns small-6">
-                    <div class="primary callout">
-                        <p>Six columns</p>
-                    </div>
-                </div>
-                <div class="columns small-6">
-                    <div class="primary callout">
-                        <p>Six columns</p>
-                    </div>
-                </div>
+            <div class="columns small-12">
+                <p id="status"></p>
             </div>
-            <div class="row">
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="primary callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="primary callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
-                <div class="large-4 medium-4 small-4 columns">
-                    <div class="primary callout">
-                        <p>Four columns</p>
-                    </div>
-                </div>
+            <div class="columns small-3">
+                <button class="button" onclick="capturePhoto();"><i class="fa fa-camera fa-2x" aria-hidden="true"></i></button>
+            </div>
+            <div class="columns small-3">
+                <button class="button" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i class="fa fa-picture-o fa-2x" aria-hidden="true"></i></button>
+            </div>
+            <div class="columns small-6 end">
+               <p class="text">
+                  Maak een foto of kies er een uit je album!
+               </p>
             </div>
 
-            <hr />
+            <div class="columns small-12">
+                <img id="largeImage" src="" />
+            </div>
+
         </div>
+
     </div>
+
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
     <script type="text/javascript">
         app.initialize();
     </script>

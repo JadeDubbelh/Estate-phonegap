@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/foundation.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+
+    <title>Estate Notities</title>
+
+    <script>
+    </script>
+</head>
+
+<body onload="onload()">
+
+    <div class="columns small-12">
+        <div class="row">
+            <div class="columns medium-11 alignMid">
+                <div class="title">
+                    <h2>Notities</h2>
+                </div>
+
+                <main>
+                    <form>
+                        <div class="row">
+                            <div class="columns small-12 medium-6 large-4">
+                                <h3>Je maakt een notitie voor:</h3>
+                            </div>
+                            <div class="columns small-12 medium-6 large-8">
+                                <select>
+                                <option value="collega1">Collega 1</option>
+                                <option value="collega2">Collega 2</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="columns small-12 medium-12 large-4">
+                                <div class="noteTextarea">
+                                    <label>
+                                    <h5>Soort notitie</h5>
+                                    <div class="switch-field">
+                                        <input type="radio" id="switch_left" name="switch_2" value="top" checked />
+                                        <label for="switch_left"><i class="fa fa-thumbs-up switch"></i>Top</label>
+                                    <input type="radio" id="switch_right" name="switch_2" value="tip" />
+                                    <label for="switch_right"><i class="fa fa-line-chart switch"></i>Tip</label>
+                                </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="columns small-12 medium-8 large-6">
+                            <div class="noteTextarea">
+                                <label>
+                                    <h5>Opmerking</h5>
+                                    <textarea class="text" rows="1" placeholder="Type hier een tip / top ..." /></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="columns small-12 medium-4 large-2">
+                            <input type="submit" class="button notebutton" value="Verzenden">
+                        </div>
+            </div>
+
+            <div class="row">
+                <div class="columns small-12">
+                    <h4>2 Notities</h4>
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="columns small-12 large-2">
+                    <div class="profilepic notes">
+                        <img src="../img/dave-thumb.jpg" />
+                    </div>
+                </div>
+                <div class="columns small-12 medium-10">
+                    <h4>Dave van Emmerik</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="noteTextarea">
+                    <div class="columns small-5">
+                        <hr class="linetop" />
+                    </div>
+                    <div class="columns small-2">
+                        <i class="fa fa-thumbs-up icon top"></i>
+                    </div>
+                    <div class="columns small-5">
+                        <hr class="linetop" />
+                    </div>
+                </div>
+                <div class="columns small-12">
+                    <div class="note">Tip, aanpassen als je hierop klikt.... kan dat? En wanneer je wegklikt weer normaal wordt weergegeven</div>
+                    <span class="date">10-20-2016   |   <i class="fa fa-trash-o delete"></i></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="noteTextarea">
+                    <div class="columns small-5">
+                        <hr class="linetip" />
+                    </div>
+                    <div class="columns small-2">
+                        <i class="fa fa-line-chart icon tip"></i>
+                    </div>
+                    <div class="columns small-5">
+                        <hr class="linetip" />
+                    </div>
+                </div>
+                <div class="columns small-12">
+                    <div class="note">Tip, aanpassen als je hierop klikt.... kan dat? En wanneer je wegklikt weer normaal wordt weergegeven</div>
+                    <span class="date">10-20-2016   |   <i class="fa fa-trash-o delete"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    </main>
+    </div>
+    </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <!-- <script type="text/javascript" src="js/app.js"></script> -->
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
