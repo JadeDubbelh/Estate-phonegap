@@ -1,6 +1,11 @@
 /* scss */
 /* ==================================================== settings */
-@import url( 'https://fonts.googleapis.com/css?family=Montserrat:400,700'); // loading font
+@font-face {
+font-family: "Montserrat";
+src: url("/fonts/Montserrat-Regular.ttf") format("opentype");   
+    /* Make sure you defined the correct path, which is related to
+        the location of your file `my_css.css` */
+}
 
 h1,
 h2,
