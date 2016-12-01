@@ -1,6 +1,9 @@
 /* scss */
 /* ==================================================== settings */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("opentype"); }
+
 h1,
 h2,
 h3,
