@@ -2,7 +2,7 @@
 /* ==================================================== settings */
 @font-face {
 font-family: "Montserrat";
-src: url("/fonts/Montserrat-Regular.ttf") format("opentype");   
+src: url("/fonts/Montserrat-Regular.ttf") format("opentype");
 }
 
 h1,
@@ -11,7 +11,7 @@ h3,
 h4,
 h5 {
     margin: 0;
-    padding: 0;
+    padding: 1em;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 700;
 }
@@ -88,6 +88,10 @@ hr.divider {
     margin: 0 0 10px;
 }
 
+form {
+   padding:1em;
+}
+
 textarea {
     width: 100%;
     height: 100px;
@@ -128,6 +132,12 @@ select {
         border-bottom: 4px solid $color-secondary;
     }
 }
+
+ul,
+li {
+    list-style: none;
+}
+
 /* ==================================================== components */
 
 .profilepic {

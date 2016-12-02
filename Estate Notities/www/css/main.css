@@ -10,7 +10,7 @@ h3,
 h4,
 h5 {
   margin: 0;
-  padding: 0;
+  padding: 1em;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700; }
 
@@ -60,6 +60,9 @@ hr.divider {
   float: left;
   margin: 0 0 10px; }
 
+form {
+  padding: 1em; }
+
 textarea {
   width: 100%;
   height: 100px;
@@ -94,6 +97,10 @@ select {
     box-shadow: none;
     border: 0 none;
     border-bottom: 4px solid #35b0e4; }
+
+ul,
+li {
+  list-style: none; }
 
 /* ==================================================== components */
 .profilepic {

@@ -25,21 +25,6 @@
 
     <title>Estate Notities</title>
 
-    <style>
-        p, h3 {
-            padding: 1em;
-        }
-
-        ul,
-        li {
-            list-style: none;
-        }
-
-        form {
-            padding: 20px 0;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -83,6 +68,7 @@
                   <p>
                      Selecteer een collega
                   </p>
+
                   <select>
                   <option value="collega1">Dave van Emmerik</option>
                   <option value="collega2">Fokkejan Meijer</option>
@@ -161,6 +147,20 @@
             statusBarStyle: "black-translucent"
         });
     </script>
+                      <script type="text/javascript">
+                         $(function() {
+                            $.ajax({
+                               url : 'http://sketch.esta-w01.estatetilburg.local/test.json',
+                               dataType: 'json',
+                               crossDomain: true,
+                               success: function(data)
+                               {
+                                  console.log(data);
+                               }
+                            });
+                         });
+
+                      </script>
 </body>
 
 </html>
