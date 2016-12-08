@@ -10,25 +10,22 @@ h3,
 h4,
 h5 {
   margin: 0;
-  padding: 1em;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700; }
 
 h2 {
-  margin-top: 15px;
-  font-size: 25px;
-  padding-bottom: 15px; }
+  font-size: 25px; }
 
 h3 {
   margin: 10px 0;
   font-size: 18px; }
 
 h4 {
-  margin: 10px 0;
+  padding: 0.5 1em;
   font-size: 16px; }
 
 h5 {
-  margin: 10px 0;
+  padding: 0.5 1em;
   font-size: 14px; }
 
 p {
@@ -58,149 +55,404 @@ hr.divider {
   background-color: #eeeeee;
   width: 25%;
   float: left;
-  margin: 0 0 10px; }
+  margin-bottom: 10px;
+  margin-top: 0; }
 
 form {
-  padding: 1em; }
+  padding: 1em 0; }
+  form input[type=password],
+  form input[type=text] {
+    width: 100%;
+    height: 30px;
+    border-radius: 0;
+    box-shadow: none;
+    resize: none;
+    border: 0 none;
+    border-bottom: 4px solid #eeeeee;
+    font-size: 14px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 400;
+    z-index: 999; }
+    form input[type=password]:focus,
+    form input[type=text]:focus {
+      box-shadow: none;
+      border: 0 none;
+      border-bottom: 4px solid #35b0e4; }
 
-textarea {
+select:not(:focus) {
   width: 100%;
-  height: 100px;
   border-radius: 0;
   box-shadow: none;
   resize: none;
   border: 0 none;
   border-bottom: 4px solid #eeeeee;
-  font-size: 14px;
   font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 400;
   overflow: hidden;
-  z-index: 999; }
-  textarea:focus {
-    box-shadow: none;
-    border: 0 none;
-    border-bottom: 4px solid #35b0e4; }
+  z-index: 999;
+  background: none; }
 
-select {
-  width: 100%;
-  border-radius: 0;
+select:focus {
   box-shadow: none;
-  resize: none;
   border: 0 none;
-  border-bottom: 4px solid #eeeeee;
-  font-size: 14px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 400;
-  overflow: hidden;
-  z-index: 999; }
-  select:focus {
-    box-shadow: none;
-    border: 0 none;
-    border-bottom: 4px solid #35b0e4; }
+  border-bottom: 4px solid #35b0e4; }
 
-ul,
-li {
+li,
+ul {
   list-style: none; }
 
-/* ==================================================== components */
+.noteTextarea {
+  margin-top: 15px;
+  position: relative;
+  z-index: 2; }
+  .noteTextarea .top {
+    color: #74c7a1; }
+  .noteTextarea .tip {
+    color: #e34856; }
+  .noteTextarea .date {
+    font-size: 13px;
+    color: #b7b7b7; }
+  .noteTextarea .note p {
+    margin: 0; }
+  .noteTextarea i {
+    margin-top: 5px; }
+  .noteTextarea textarea {
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    box-shadow: none;
+    resize: none;
+    border: 0 none;
+    border-bottom: 4px solid #eeeeee;
+    font-size: 14px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    z-index: 999; }
+    .noteTextarea textarea:focus {
+      box-shadow: none;
+      border: 0 none;
+      border-bottom: 4px solid #35b0e4; }
+
+/* ======================================================================================================== login */
+.loginicon {
+  color: #3b3b3b;
+  margin-top: 7px; }
+
+.nopadding {
+  float: left; }
+
+.loginform {
+  height: 50%;
+  padding-bottom: 20px;
+  width: 100%;
+  z-index: 999;
+  background: white; }
+
+.loginimage {
+  height: 100%;
+  width: 100%;
+  float: left;
+  background: red;
+  z-index: -999;
+  position: absolute; }
+  .loginimage img {
+    /* Set rules to fill background */
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    /* Set up positioning */
+    position: fixed;
+    top: 0;
+    left: 0; }
+
+/* ======================================================================================================== components dashboard */
+.alignMid .main_title {
+  text-align: center; }
+
+.alignMid .dashboard_block {
+  border: 2px solid #b7b7b7;
+  padding: 20px 0;
+  width: 100%;
+  height: inherit;
+  float: left; }
+  .alignMid .dashboard_block .dashboard_title {
+    text-align: center; }
+  .alignMid .dashboard_block .legend-container {
+    width: 100%;
+    margin-top: 40px; }
+    .alignMid .dashboard_block .legend-container .legend-left,
+    .alignMid .dashboard_block .legend-container .legend-right {
+      width: 100%;
+      float: left;
+      padding-left: 13px; }
+  .alignMid .dashboard_block .budget,
+  .alignMid .dashboard_block .dagen,
+  .alignMid .dashboard_block .deadline,
+  .alignMid .dashboard_block .gemiddeld,
+  .alignMid .dashboard_block .hoogst,
+  .alignMid .dashboard_block .laagst {
+    text-align: center;
+    padding-top: 30px; }
+  .alignMid .dashboard_block .deadline {
+    color: #35b0e4; }
+    .alignMid .dashboard_block .deadline p {
+      color: #35b0e4; }
+  .alignMid .dashboard_block .hoogst {
+    color: #74c7a1; }
+  .alignMid .dashboard_block .laagst {
+    color: #e34856; }
+  .alignMid .dashboard_block .gemiddeld {
+    color: #ffbc2f; }
+    .alignMid .dashboard_block .gemiddeld p {
+      color: #ffbc2f; }
+  .alignMid .dashboard_block .dagen {
+    color: #8a173f; }
+    .alignMid .dashboard_block .dagen p {
+      color: #8a173f; }
+  .alignMid .dashboard_block .budget {
+    color: #055381; }
+    .alignMid .dashboard_block .budget p {
+      color: #055381; }
+  .alignMid .dashboard_block p {
+    font-family: "Montserrat", arial;
+    font-size: 25px;
+    font-weight: 700; }
+  .alignMid .dashboard_block .hoogst ul,
+  .alignMid .dashboard_block .laagst ul {
+    list-style: none;
+    content: "";
+    padding: 0;
+    margin: 0; }
+    .alignMid .dashboard_block .hoogst ul li,
+    .alignMid .dashboard_block .laagst ul li {
+      font-family: "Montserrat", arial;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left: 0; }
+      .alignMid .dashboard_block .hoogst ul li::before,
+      .alignMid .dashboard_block .laagst ul li::before {
+        list-style: none;
+        content: "";
+        padding: 0;
+        margin: 0; }
+      .alignMid .dashboard_block .hoogst ul li:first-child,
+      .alignMid .dashboard_block .laagst ul li:first-child {
+        padding-top: 20px; }
+
+.alignMid .chart {
+  height: inherit; }
+
+.alignMid .blocks {
+  padding-bottom: 30px; }
+
+.alignMid .ontvangenbeoordeling {
+  margin: 20px 0 30px 20px;
+  height: 100%;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -ms-flex-align: center;
+      align-items: center;
+  /* vertically center flex items */ }
+  .alignMid .ontvangenbeoordeling .verticalcenter {
+    height: 50%;
+    margin-right: 20px; }
+
+/* ======================================================================================================== components profile */
 .profilepic {
   border-radius: 50%;
   margin-left: -1px;
   position: relative;
-  max-width: 100px;
+  max-width: 120px;
   text-align: center;
-  transition: all .5s ease; }
+  transition: all 0.5s ease; }
   .profilepic img {
     border-radius: 50%;
     display: inline-block; }
+  .profilepic .right_accept {
+    background: #74c7a1;
+    border: 1px solid #74c7a1;
+    border-radius: 0 150px 150px 0;
+    float: left;
+    left: 50%;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    visibility: hidden;
+    padding: 5px;
+    top: 0; }
+  .profilepic .left_decline {
+    background: #e34856;
+    border: 1px solid #e34856;
+    border-radius: 150px 0 0 150px;
+    float: left;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    visibility: hidden;
+    top: 0; }
+  .profilepic i {
+    color: #ffffff;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+  .profilepic:hover .left_decline,
+  .profilepic:hover .mail,
+  .profilepic:hover .right_accept,
+  .profilepic:hover .undo,
+  .profilepic:hover .view {
+    visibility: visible;
+    opacity: 0.9; }
+    .profilepic:hover .left_decline i,
+    .profilepic:hover .mail i,
+    .profilepic:hover .right_accept i,
+    .profilepic:hover .undo i,
+    .profilepic:hover .view i {
+      visibility: visible; }
+  .profilepic:hover .left_decline:hover,
+  .profilepic:hover .right_accept:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out; }
 
-.centered {
-  text-align: center; }
-
-.noteTextarea {
-  margin-top: 20px; }
-
-.notes {
-  margin-top: 30px;
-  width: 100px; }
-
-.note {
-  font-family: Montserrat; }
-
-.date {
-  font-family: Montserrat;
-  color: #b7b7b7; }
-
-hr.linetop {
-  background-color: #74c7a1;
-  width: 100%;
-  height: 1px;
-  border: 0;
-  top: 10px; }
-
-hr.linetip {
-  background-color: #e34856;
-  width: 100%;
-  height: 1px;
-  border: 0;
-  top: 10px; }
-
-.icon {
-  width: 100%;
+.dashboard {
+  max-width: 100%;
   display: inline-block;
-  margin-top: 13px; }
+  vertical-align: top;
+  text-align: center;
+  margin: 7%; }
 
-i {
+.uitnodigen {
+  max-width: 100px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 3%; }
+
+.profile_container {
   text-align: center; }
 
-.top {
-  color: #74c7a1; }
+.accept {
+  border: 4px solid #74c7a1; }
 
-.tip {
-  color: #e34856; }
+.decline {
+  border: 4px solid #e34856; }
 
-.switch {
-  margin: 0 10px 0 0;
-  height: 0; }
+.concept {
+  border: 4px solid #35b0e4; }
 
-.opmerking {
-  margin-top: 10px; }
+.blanc {
+  border: 4px solid #ffffff; }
 
-.button {
-  background: #35b0e4;
-  width: 150px; }
+.uitgenodigd {
+  background-color: #ffffff;
+  border-radius: 150px;
+  float: left;
+  left: -1px;
+  top: -1px;
+  position: absolute;
+  height: 104%;
+  width: 103%;
+  opacity: 0.85; }
+  .uitgenodigd .personalnote {
+    visibility: hidden; }
+  .uitgenodigd:hover {
+    background-color: #64D0DA;
+    opacity: 0.85;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+    .uitgenodigd:hover .personalnote {
+      visibility: visible; }
+      .uitgenodigd:hover .personalnote i {
+        color: #ffffff; }
 
-.notebutton {
-  font-family: "Montserrat", Arial, sans-serif;
-  bottom: 0; }
+.mail,
+.undo,
+.view {
+  background-color: #35b0e4;
+  border-radius: 150px;
+  float: left;
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: 101%;
+  width: 101%;
+  visibility: hidden; }
+  .mail:hover,
+  .undo:hover,
+  .view:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out; }
 
 .switch-field {
   font-family: Montserrat, sans-serif;
   overflow: hidden;
   margin: 18px 0; }
+  .switch-field i {
+    margin-right: 10px; }
+  .switch-field input {
+    display: none; }
+  .switch-field label {
+    float: left;
+    width: 120px;
+    height: 45px;
+    background-color: #b7b7b7;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    text-shadow: none;
+    padding: 0.6em 1em;
+    margin: 0;
+    transition: all 0.2s ease-in-out; }
+  .switch-field label:hover {
+    cursor: pointer; }
+  .switch-field input:checked + label {
+    box-shadow: none; }
+  .switch-field .tip_red:checked + label,
+  .switch-field .top_green:checked + label {
+    background-color: #35b0e4; }
+  .switch-field [type=radio] + label {
+    margin: 0;
+    border-bottom: 4px solid #35b0e4; }
 
-.switch-field input {
-  display: none; }
+.ontvangenbeoordeling {
+  margin: 20px 0;
+  height: 100%;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  /* establish flex container */
+  -ms-flex-align: center;
+      align-items: center;
+  /* vertically center flex items */ }
+  .ontvangenbeoordeling .verticalcenter {
+    height: 50%;
+    margin-right: 20px; }
 
-.switch-field label {
-  float: left; }
-
-.switch-field label {
-  width: 120px;
-  background-color: #b7b7b7;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: normal;
-  text-align: center;
-  text-shadow: none;
-  padding: 0.45em 1em;
-  margin: 0;
-  border-bottom: 4px solid #35b0e4;
-  transition: all 0.2s ease-in-out; }
-
-.switch-field label:hover {
-  cursor: pointer; }
-
-.switch-field input:checked + label {
+.columns .button {
   background-color: #35b0e4;
-  box-shadow: none; }
+  width: 150px;
+  font-family: "Montserrat", arial; }
+
+.columns .inloggen {
+  margin-top: 20px; }
+
+.columns h1 {
+  font-size: 30px;
+  padding-top: 30px;
+  text-align: center; }
+
+.centered {
+  text-align: center; }
+
+.notetitel {
+  margin-top: 30px; }
