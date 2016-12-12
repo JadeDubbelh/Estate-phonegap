@@ -34,40 +34,40 @@
 
     <div data-role="view" id="login" data-title="Notitiesysteem" data-use-native-scrolling="true">
 
-       <div class="columns small-12 medium-3 nopadding loginform">
-           <div class="row">
-               <div class="columns small-12">
+        <div class="columns small-12 medium-3 nopadding loginform">
+            <div class="row">
+                <div class="columns small-12">
 
-                   <h1>Login</h1>
+                    <h1>Login</h1>
 
-                   <form action="#home" class="inloggen">
-                       <div class="columns small-1">
-                           <i class="fa fa-user loginicon"></i>
-                       </div>
-                       <div class="columns small-11">
-                           <input type="text" class="logintext" name="gebruikersnaam" placeholder="Gebruikersnaam" />
-                       </div>
-                       <div class="columns small-1">
-                           <i class="fa fa-key loginicon"></i>
-                       </div>
-                       <div class="columns small-11">
-                           <input type="password" class="logintext" name="wachtwoord" placeholder="Wachtwoord" />
-                       </div>
+                    <form action="#home" class="inloggen">
+                        <div class="columns small-1">
+                            <i class="fa fa-user loginicon"></i>
+                        </div>
+                        <div class="columns small-11">
+                            <input type="text" class="logintext" name="gebruikersnaam" placeholder="Gebruikersnaam" />
+                        </div>
+                        <div class="columns small-1">
+                            <i class="fa fa-key loginicon"></i>
+                        </div>
+                        <div class="columns small-11">
+                            <input type="password" class="logintext" name="wachtwoord" placeholder="Wachtwoord" />
+                        </div>
 
-                       <div class="columns small-12 centered">
-                           <input class="button inloggen" type="submit" name="submit" value="Inloggen" />
-                       </div>
+                        <div class="columns small-12 centered">
+                            <input class="button inloggen" type="submit" name="submit" value="Inloggen" />
+                        </div>
 
-                   </form>
-               </div>
-           </div>
-       </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
 
-               <div class="loginimage">
-                   <img src="img/login.jpg" />
+        <div class="loginimage">
+            <img src="img/login.jpg" />
 
-              </div>
+        </div>
 
     </div>
 
@@ -466,15 +466,32 @@
         });
     </script>
     <script type="text/javascript">
+    // extern script
+        //   $(function() {
+        //       $.ajax({
+        //           url: 'http://sketch.esta-w01.estatetilburg.local/test.json',
+        //           dataType: 'json',
+        //           crossDomain: true,
+        //           success: function(data) {
+        //               console.log(data);
+        //           }
+        //       });
+        //   });
+
+// lokaal script
         $(function() {
             $.ajax({
-                url: 'http://sketch.esta-w01.estatetilburg.local/test.json',
+                url: 'json/testdata.json',
                 dataType: 'json',
-                crossDomain: true,
+                async: false,
                 success: function(data) {
-                    console.log(data);
+
+                    $('.main_title').append($('<p>', {
+                        text: data.employees
+                    }));
                 }
             });
+
         });
     </script>
 </body>
