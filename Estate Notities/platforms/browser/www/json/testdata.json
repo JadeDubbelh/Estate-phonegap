@@ -41,7 +41,13 @@
         "verbeterpunt": ["Flexibiliteit"],
         "gemiddeld": "2,5",
         "opleidingsbudget": "1020,20",
-        "opleidingsdagen": "4"
+        "opleidingsdagen": "4",
+        "notities": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg",
+            "sort": "tip",
+            "note": "Dit is een tip."
+        }]
     }, {
         "naam": "Rob Maas",
         "ontvangenuitnodiging": [{

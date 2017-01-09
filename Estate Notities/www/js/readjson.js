@@ -25,7 +25,6 @@ $(function() {
                 text: "Hallo, " + data.employees[i].naam
             }));
 
-
             $.each(data.employees[i].ontvangenuitnodiging, function(key, value) {
                 var left = "<a href='#'class='left_decline' onclick=''><i class='fa fa-times'></i></a>";
                 var right = "<a href='#' class='right_accept' onclick=''><i class='fa fa-check'></i></a>";
@@ -87,6 +86,11 @@ $(function() {
                     text: data.employees[i].opleidingsdagen + " dagen"
                 }));
             }
+
+            // toe te voegen:
+            // notities uitlezen van json
+            // notitie aanmaken en opslaan json
+
         }
     });
 });
