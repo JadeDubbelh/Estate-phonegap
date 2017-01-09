@@ -1,4 +1,69 @@
 {
-
-    "employees": ["Fokkejan Meijer", "Dave van Emmerik", "Rob Maas"]
+    "employees": [{
+        "naam": "Dave van Emmerik",
+        "ontvangenuitnodiging": [{
+            "peer": "Fokkejan Meijer",
+            "foto": "img/fokkejan-thumb.jpg"
+        }],
+        "verstuurdeuitnodiging": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "tebeoordelen": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "deadline": "25-12-2016",
+        "topcompetentie": ["Netwerken", "Inzet"],
+        "verbeterpunt": ["Samenwerken", "klantgerichtheid"],
+        "gemiddeld": "3,2",
+        "opleidingsbudget": "520,20",
+        "opleidingsdagen": "1"
+    }, {
+        "naam": "Fokkejan Meijer",
+        "deadline": "25-12-2016",
+        "ontvangenuitnodiging": [{
+            "peer": "Dave van Emmerik",
+            "foto": "img/dave-thumb.jpg"
+        }, {
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "verstuurdeuitnodiging": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "tebeoordelen": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "topcompetentie": ["Samenwerken"],
+        "verbeterpunt": ["Flexibiliteit"],
+        "gemiddeld": "2,5",
+        "opleidingsbudget": "1020,20",
+        "opleidingsdagen": "4"
+    }, {
+        "naam": "Rob Maas",
+        "ontvangenuitnodiging": [{
+            "peer": "Dave van Emmerik",
+            "foto": "img/dave-thumb.jpg"
+        }, {
+            "peer": "Fokkejan Meijer",
+            "foto": "img/fokkejan-thumb.jpg"
+        }],
+        "verstuurdeuitnodiging": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "tebeoordelen": [{
+            "peer": "Rob Maas",
+            "foto": "img/rob-thumb.jpg"
+        }],
+        "deadline": "25-12-2016",
+        "topcompetentie": ["Flexibiliteit"],
+        "verbeterpunt": ["Plannen & Organiseren"],
+        "gemiddeld": "2.8",
+        "opleidingsbudget": "720,80",
+        "opleidingsdagen": "2"
+    }]
 }

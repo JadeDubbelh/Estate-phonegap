@@ -199,7 +199,7 @@ ul {
 
 .loginform {
     height: 50%;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     width: 100%;
     z-index: 999;
     background: white;
@@ -308,7 +308,7 @@ ul {
 
         p {
             font-family: "Montserrat", arial;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: 700;
         }
 
@@ -362,7 +362,10 @@ ul {
     }
 }
 /* ======================================================================================================== components profile */
-.profilepic {
+.profilepic,
+.profilepic_b,
+.profilepic_o,
+.profilepic_v {
     border-radius: 50%;
     margin-left: -1px;
     position: relative;
@@ -459,7 +462,10 @@ ul {
     margin: 3%;
 }
 
-.profile_container {
+.profile_container,
+.profile_container_b,
+.profile_container_o,
+.profile_container_v {
     text-align: center;
 }
 

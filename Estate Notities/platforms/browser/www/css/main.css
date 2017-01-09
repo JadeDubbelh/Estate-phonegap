@@ -217,7 +217,7 @@ ul {
       color: #055381; }
   .alignMid .dashboard_block p {
     font-family: "Montserrat", arial;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700; }
   .alignMid .dashboard_block .hoogst ul,
   .alignMid .dashboard_block .laagst ul {
@@ -262,17 +262,26 @@ ul {
     margin-right: 20px; }
 
 /* ======================================================================================================== components profile */
-.profilepic {
+.profilepic,
+.profilepic_b,
+.profilepic_o,
+.profilepic_v {
   border-radius: 50%;
   margin-left: -1px;
   position: relative;
   max-width: 120px;
   text-align: center;
   transition: all 0.5s ease; }
-  .profilepic img {
+  .profilepic img,
+  .profilepic_b img,
+  .profilepic_o img,
+  .profilepic_v img {
     border-radius: 50%;
     display: inline-block; }
-  .profilepic .right_accept {
+  .profilepic .right_accept,
+  .profilepic_b .right_accept,
+  .profilepic_o .right_accept,
+  .profilepic_v .right_accept {
     background: #74c7a1;
     border: 1px solid #74c7a1;
     border-radius: 0 150px 150px 0;
@@ -284,7 +293,10 @@ ul {
     visibility: hidden;
     padding: 5px;
     top: 0; }
-  .profilepic .left_decline {
+  .profilepic .left_decline,
+  .profilepic_b .left_decline,
+  .profilepic_o .left_decline,
+  .profilepic_v .left_decline {
     background: #e34856;
     border: 1px solid #e34856;
     border-radius: 150px 0 0 150px;
@@ -295,7 +307,10 @@ ul {
     width: 50%;
     visibility: hidden;
     top: 0; }
-  .profilepic i {
+  .profilepic i,
+  .profilepic_b i,
+  .profilepic_o i,
+  .profilepic_v i {
     color: #ffffff;
     visibility: hidden;
     position: absolute;
@@ -307,17 +322,53 @@ ul {
   .profilepic:hover .mail,
   .profilepic:hover .right_accept,
   .profilepic:hover .undo,
-  .profilepic:hover .view {
+  .profilepic:hover .view,
+  .profilepic_b:hover .left_decline,
+  .profilepic_b:hover .mail,
+  .profilepic_b:hover .right_accept,
+  .profilepic_b:hover .undo,
+  .profilepic_b:hover .view,
+  .profilepic_o:hover .left_decline,
+  .profilepic_o:hover .mail,
+  .profilepic_o:hover .right_accept,
+  .profilepic_o:hover .undo,
+  .profilepic_o:hover .view,
+  .profilepic_v:hover .left_decline,
+  .profilepic_v:hover .mail,
+  .profilepic_v:hover .right_accept,
+  .profilepic_v:hover .undo,
+  .profilepic_v:hover .view {
     visibility: visible;
     opacity: 0.9; }
     .profilepic:hover .left_decline i,
     .profilepic:hover .mail i,
     .profilepic:hover .right_accept i,
     .profilepic:hover .undo i,
-    .profilepic:hover .view i {
+    .profilepic:hover .view i,
+    .profilepic_b:hover .left_decline i,
+    .profilepic_b:hover .mail i,
+    .profilepic_b:hover .right_accept i,
+    .profilepic_b:hover .undo i,
+    .profilepic_b:hover .view i,
+    .profilepic_o:hover .left_decline i,
+    .profilepic_o:hover .mail i,
+    .profilepic_o:hover .right_accept i,
+    .profilepic_o:hover .undo i,
+    .profilepic_o:hover .view i,
+    .profilepic_v:hover .left_decline i,
+    .profilepic_v:hover .mail i,
+    .profilepic_v:hover .right_accept i,
+    .profilepic_v:hover .undo i,
+    .profilepic_v:hover .view i {
       visibility: visible; }
   .profilepic:hover .left_decline:hover,
-  .profilepic:hover .right_accept:hover {
+  .profilepic:hover .right_accept:hover,
+  .profilepic_b:hover .left_decline:hover,
+  .profilepic_b:hover .right_accept:hover,
+  .profilepic_o:hover .left_decline:hover,
+  .profilepic_o:hover .right_accept:hover,
+  .profilepic_v:hover .left_decline:hover,
+  .profilepic_v:hover .right_accept:hover {
     opacity: 1;
     transition: opacity 0.2s ease-in-out; }
 
@@ -335,7 +386,10 @@ ul {
   text-align: center;
   margin: 3%; }
 
-.profile_container {
+.profile_container,
+.profile_container_b,
+.profile_container_o,
+.profile_container_v {
   text-align: center; }
 
 .accept {
