@@ -242,6 +242,7 @@ ul {
 
         .dashboard_title {
             text-align: center;
+            cursor: pointer;
         }
 
         .legend-container {
@@ -376,6 +377,7 @@ ul {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    cursor: pointer;
 
     img {
         border-radius: 50%;
@@ -391,9 +393,14 @@ ul {
         position: absolute;
         height: 100%;
         width: 50%;
+        //  display: none;
         visibility: hidden;
         padding: 5px;
         top: 0;
+
+        a {
+            cursor: pointer;
+        }
     }
 
     .left_decline {
@@ -405,8 +412,13 @@ ul {
         position: absolute;
         height: 100%;
         width: 50%;
+        //  display: none;
         visibility: hidden;
         top: 0;
+
+        a {
+            cursor: pointer;
+        }
     }
 
     i {
@@ -426,6 +438,7 @@ ul {
         .view {
             visibility: visible;
             opacity: 0.9;
+            cursor: pointer;
 
             i {
                 visibility: visible;
@@ -436,6 +449,7 @@ ul {
         .right_accept {
             &:hover {
                 opacity: 1;
+                cursor: pointer;
                 -webkit-transition: opacity 0.2s ease-in-out;
                 -moz-transition: opacity 0.2s ease-in-out;
                 -ms-transition: opacity 0.2s ease-in-out;
@@ -531,6 +545,7 @@ ul {
     height: 101%;
     width: 101%;
     visibility: hidden;
+    cursor: pointer;
 
     &:hover {
         opacity: 1;

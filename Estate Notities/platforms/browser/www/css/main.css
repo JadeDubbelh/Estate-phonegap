@@ -178,7 +178,8 @@ ul {
   height: inherit;
   float: left; }
   .alignMid .dashboard_block .dashboard_title {
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
   .alignMid .dashboard_block .legend-container {
     width: 100%;
     margin-top: 40px; }
@@ -271,7 +272,8 @@ ul {
   position: relative;
   max-width: 120px;
   text-align: center;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  cursor: pointer; }
   .profilepic img,
   .profilepic_b img,
   .profilepic_o img,
@@ -293,6 +295,11 @@ ul {
     visibility: hidden;
     padding: 5px;
     top: 0; }
+    .profilepic .right_accept a,
+    .profilepic_b .right_accept a,
+    .profilepic_o .right_accept a,
+    .profilepic_v .right_accept a {
+      cursor: pointer; }
   .profilepic .left_decline,
   .profilepic_b .left_decline,
   .profilepic_o .left_decline,
@@ -307,6 +314,11 @@ ul {
     width: 50%;
     visibility: hidden;
     top: 0; }
+    .profilepic .left_decline a,
+    .profilepic_b .left_decline a,
+    .profilepic_o .left_decline a,
+    .profilepic_v .left_decline a {
+      cursor: pointer; }
   .profilepic i,
   .profilepic_b i,
   .profilepic_o i,
@@ -339,7 +351,8 @@ ul {
   .profilepic_v:hover .undo,
   .profilepic_v:hover .view {
     visibility: visible;
-    opacity: 0.9; }
+    opacity: 0.9;
+    cursor: pointer; }
     .profilepic:hover .left_decline i,
     .profilepic:hover .mail i,
     .profilepic:hover .right_accept i,
@@ -370,6 +383,7 @@ ul {
   .profilepic_v:hover .left_decline:hover,
   .profilepic_v:hover .right_accept:hover {
     opacity: 1;
+    cursor: pointer;
     transition: opacity 0.2s ease-in-out; }
 
 .dashboard {
@@ -439,7 +453,8 @@ ul {
   position: absolute;
   height: 101%;
   width: 101%;
-  visibility: hidden; }
+  visibility: hidden;
+  cursor: pointer; }
   .mail:hover,
   .undo:hover,
   .view:hover {

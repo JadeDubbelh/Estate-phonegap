@@ -15,7 +15,7 @@ $(function() {
     $.ajax({
         url: 'json/testdata.json',
         dataType: 'json',
-        async: false,
+        async: true,
         success: function(data) {
 
             var i = 1;
@@ -26,8 +26,9 @@ $(function() {
             }));
 
             $.each(data.employees[i].ontvangenuitnodiging, function(key, value) {
-                var left = "<a href='#'class='left_decline' onclick=''><i class='fa fa-times'></i></a>";
-                var right = "<a href='#' class='right_accept' onclick=''><i class='fa fa-check'></i></a>";
+                var left = "<a class='left_decline'><i class='fa fa-times'></i></a>";
+                var right = "<a class='right_accept'><i class='fa fa-check'></i></a>";
+                var clickHandler = ("ontouchstart" in document.documentElement ? "touchstart" : "click");
 
                 $('.ontvangen').append("<div class='columns small-6 medium-6 end'></div>");
                 $('.ontvangen').find('.columns').eq(key).append("<div class='profile_container_o'></div>");
@@ -35,6 +36,49 @@ $(function() {
                 $('.profilepic_o').eq(key).append(left, right);
                 $('.profilepic_o').eq(key).append($('<img src=' + this.foto + '>'));
                 //   console.log(this.foto);
+
+                $(".left_decline")
+                    .bind(clickHandler,
+                        function() {
+                            //var $this = $(this);
+                            var $ongedaan = $("<a class='undo'><i class='fa fa-undo fa-2x' aria-hidden='true'></i></a>");
+
+                            $(this).closest(".profilepic_o").removeClass("blanc");
+                            $(this).closest(".profilepic_o").addClass("decline");
+                            $(this).closest(".profilepic_o").prepend($ongedaan);
+                            $(this).closest(".profilepic_o").find(".right_accept").hide();
+                            $(this).hide();
+
+                            undo();
+                        });
+
+                $(".right_accept")
+                    .bind(clickHandler,
+                        function() {
+
+                            var $ongedaan = $("<a class='undo'><i class='fa fa-undo fa-2x' aria-hidden='true'></i></a>");
+
+                            $(this).closest(".profilepic_o").removeClass("blanc");
+                            $(this).closest(".profilepic_o").addClass("accept");
+                            $(this).closest(".profilepic_o").prepend($ongedaan);
+                            $(this).closest(".profilepic_o").find(".left_decline").hide();
+                            $(this).hide();
+
+                            undo();
+                        });
+
+                function undo() {
+                    $(".undo")
+                        .bind(clickHandler,
+                            function() {
+                                $(this).closest(".profilepic_o").removeClass("accept");
+                                $(this).closest(".profilepic_o").removeClass("decline");
+                                $(this).closest(".profilepic_o").addClass("blanc");
+                                $(this).closest(".profilepic_o").find(".left_decline").show();
+                                $(this).closest(".profilepic_o").find(".right_accept").show();
+                                $(this).remove();
+                            });
+                }
             });
 
             $.each(data.employees[i].verstuurdeuitnodiging, function(key, value) {
@@ -88,8 +132,31 @@ $(function() {
             }
 
             // toe te voegen:
-            // notities uitlezen van json
-            // notitie aanmaken en opslaan json
+            // notities uitlezen van json?
+            // notitie aanmaken en opslaan json?
+
+            $.fn.serializeObject = function() {
+                var o = {};
+                var a = this.serializeArray();
+                $.each(a, function() {
+                    if (o[this.name] !== undefined) {
+                        if (!o[this.name].push) {
+                            o[this.name] = [o[this.name]];
+                        }
+                        o[this.name].push(this.value || '');
+                    } else {
+                        o[this.name] = this.value || '';
+                    }
+                });
+                return o;
+            };
+
+            $(function() {
+                $('#noteform').submit(function() {
+                    $('.note').text(JSON.stringify($('#noteform').serializeObject()));
+                    return false;
+                });
+            });
 
         }
     });
