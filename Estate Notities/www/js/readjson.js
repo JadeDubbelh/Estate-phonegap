@@ -153,8 +153,8 @@ $(function() {
 
             $(function() {
                 $('#noteform').submit(function() {
-                    $('.note').text(JSON.stringify($('#noteform').serializeObject()));
-                    return false;
+                      $('.note').text(JSON.stringify($('#noteform').serializeObject()));
+                      return false;
                 });
             });
 

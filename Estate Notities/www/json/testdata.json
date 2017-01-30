@@ -18,7 +18,8 @@
         "verbeterpunt": ["Samenwerken", "klantgerichtheid"],
         "gemiddeld": "3,2",
         "opleidingsbudget": "520,20",
-        "opleidingsdagen": "1"
+        "opleidingsdagen": "1",
+        "notities": []
     }, {
         "naam": "Fokkejan Meijer",
         "deadline": "25-12-2016",
@@ -42,12 +43,7 @@
         "gemiddeld": "2,5",
         "opleidingsbudget": "1020,20",
         "opleidingsdagen": "4",
-        "notities": [{
-            "peer": "Rob Maas",
-            "foto": "img/rob-thumb.jpg",
-            "sort": "tip",
-            "note": "Dit is een tip."
-        }]
+        "notities": []
     }, {
         "naam": "Rob Maas",
         "ontvangenuitnodiging": [{
@@ -70,6 +66,7 @@
         "verbeterpunt": ["Plannen & Organiseren"],
         "gemiddeld": "2.8",
         "opleidingsbudget": "720,80",
-        "opleidingsdagen": "2"
+        "opleidingsdagen": "2",
+        "notities": []
     }]
 }
